@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    .header,
+    .footer {
+        background-color: #a6a6a6;
+        height: 130px;
+        text-align: center;
+        font-size: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    
+    .column {
+        float: left;
+        padding: 1px 48px;
+    }
+    
+    .column h1 {
+        background-color: #ff002b;
+        text-align: center;
+        padding: 5px 9px;
+        font-size: 50px;
+        border-radius: 10px;
+        width: 100%;
+    }
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .menu {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .menu ul li {
+        list-style: none;
+        padding: 13px;
+        background-color: red;
+        width: 60px;
+        margin: 1px;
+        color: white;
+        border-radius: 6px;
+        text-align: center;
+    }
+    
+    .content {
+        width: 60%;
+        margin-left: -5px;
+    }
+    
+    .strong {
+        color: white;
+        background-color: #000099;
+        display: block;
+        padding: 10px 19px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+    
+    .navbar {
+        margin: 6px;
+        padding: 0;
+    }
+    
+    .navbar ul {
+        background-color: rgb(0, 255, 255);
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0;
+        overflow: auto;
+    }
+    
+    .navbar ul li {
+        list-style: none;
+        float: left;
+        padding: 0;
+    }
+    
+    .navbar ul li a {
+        height: 100%;
+        display: block;
+        padding: 14px 17px;
+        text-decoration: none;
+        color: white;
+        font-size: 28px;
+        text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .navbar ul li a:hover {
+        background-color: rgb(0, 195, 255);
+    }
+    
+    .active {
+        background-color: red;
+    }
+    
+    .over {
+        background-color: green;
+        text-align: center;
+        position: relative;
+    }
+    
+    .over:hover .drop {
+        display: block;
+    }
+    
+    .drop {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        background-color: red;
+        padding: 1px 6px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        min-width: 160px;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <h1>This is header</h1>
+    </header>
+    <div class="clearfix">
+        <div class="column menu">
+            <ul>
+                <li>green</li>
+                <li>green</li>
+                <li>green</li>
+                <li>green</li>
+                <li>green</li>
+            </ul>
+        </div>
+
+        <div class="column content">
+            <h1>content here</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis nostrum tempore ipsam amet quas hic, dignissimos maiores rerum blanditiis at est eaque! Minima iusto numquam possimus reiciendis corrupti voluptates itaque odio eius velit hic
+                quia eos, perferendis, consectetur repellat nihil?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos natus voluptatibus aut quidem doloribus ipsam earum, eum asperiores corporis?Lorem, ipsum dolor sit amet
+                consectetur adipisicing elit. Non consequuntur neque, ut totam cupiditate aperiam magni repudiandae sapiente mollitia blanditiis? Quasi, sint perferendis blanditiis itaque eveniet sapiente autem ipsa sed! Ut ad doloribus iure ratione cupiditate
+                veniam, debitis rem impedit officia, quam illo. Veritatis porro vero architecto esse molestiae libero sequi voluptate illo quae perferendis. Praesentium fugiat rem fuga totam, nihil labore voluptatibus explicabo aliquam ut iure sapiente!
+                <br>
+                <strong class="strong">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus laborum ut dicta non in debitis optio minima repellat praesentium sint quas provident ad, rem consectetur quasi delectus! Eos, inventore nam?</strong>                <br> Nostrum vero delectus ullam corrupti at aspernatur excepturi quaerat facilis, perferendis beatae voluptas error eos non voluptatibus et neque eligendi quasi asperiores tenetur unde cumque dignissimos maxime nulla. Optio deserunt alias
+                assumenda sed accusantium, perferendis hic rem, delectus, impedit animi incidunt ipsa corrupti blanditiis nobis eaque exercitationem ex laudantium dolorum distinctio! Saepe corporis eius harum iusto hic? Sapiente voluptates accusantium
+                dignissimos quia officia maxime, similique, voluptatem tempora dolores, fugiat omnis. Inventore, alias. Laboriosam modi hic reiciendis eligendi voluptates ad fuga exercitationem quo.</p>
+        </div>
+        <div class="column menu">
+            <ul>
+                <li>blue</li>
+                <li>blue</li>
+                <li>blue</li>
+                <li>blue</li>
+                <li>blue</li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <h1>this is a footer</h1>
+    </footer>
+    <div class="over">
+        <span>hover me</span>
+        <div class="drop">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, perspiciatis!</p>
+        </div>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+        </ul>
+    </nav>
+
+
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #heads {
+        text-align: center;
+        background-color: darkviolet;
+        color: white;
+        width: 50%;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 50px;
+        margin-bottom: 0px;
+    }
+    
+    #info {
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+        margin-right: 3px;
+        display: flex;
+        box-sizing: border-box;
+        overflow-x: auto;
+        margin: 0;
+    }
+    
+    #info::-webkit-scrollbar {
+        width: 0;
+    }
+    
+    .cards ul li {
+        text-decoration: none;
+        list-style: none;
+        width: 150px;
+        height: 150px;
+        background-color: darkblue;
+        padding-left: 5rem;
+        margin: 3px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .cards ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .cards {
+        margin: 0;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    
+    #circle {
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 150px;
+        margin-right: auto;
+        margin-left: auto;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1) 3s;
+        cursor: pointer;
+    }
+    
+    .hover {
+        transform: scale(2);
+    }
+    
+    .head {
+        background-color: blueviolet;
+        display: flex;
+        text-align: center;
+        margin-top: 0px;
+        width: 100%;
+        height: 40px;
+        top: 0;
+    }
+    
+    .head ul {
+        display: flex;
+        margin: 0px;
+        margin-right: auto;
+        margin-left: auto;
+        top: 0;
+    }
+    
+    .head ul li {
+        list-style: none;
+        display: flex;
+        padding: 10px 13px;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-weight: 300;
+        transition: 0.6s;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .stick {
+        position: fixed;
+        top: 0;
+    }
+    
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    
+    #navbar {
+        overflow: hidden;
+        background-color: #333;
+    }
+    
+    #navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+</style>
+
+<body>
+
+    <h1 id="heads">Information</h1><br>
+    <!-- <header class="head" id="newid">
+        <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Services</li>
+            <li>
+                contact us
+            </li>
+        </ul>
+    </header> -->
+    <div id="navbar">
+        <a class="active">Home</a>
+        <a>News</a>
+        <a>Contact</a>
+    </div>
+    <div id="info"></div>
+
+    <br><br><br><br>
+    <div id="circle">💔</div>
+    <script src="array.js"></script>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, ad maxime adipisci harum necessitatibus beatae soluta quidem tempore quis accusamus nostrum impedit praesentium? Optio obcaecati quos dolor perferendis nostrum quis, porro cumque
+        totam iure deleniti! Nostrum, cumque reprehenderit! Doloribus veritatis, ea, ad vitae perspiciatis non at ipsam illo, voluptatem inventore quam debitis omnis voluptates rerum odit perferendis atque voluptas ab officia dolorum quae a praesentium.
+        Fugit sint, quis qui consequatur nemo maxime autem officiis et omnis molestiae impedit repudiandae dolor quam incidunt dolore praesentium assumenda modi non? Aperiam, rerum enim? Sequi consequatur, adipisci voluptatibus quae aliquid sapiente ipsam!
+        Neque dicta harum doloremque iure veritatis, nostrum facere tempore necessitatibus quisquam sit fugiat accusamus eos natus recusandae modi praesentium perspiciatis voluptas consequatur sint repudiandae pariatur commodi nisi. Eum, alias hic rerum
+        maiores tenetur tempora recusandae repudiandae corrupti necessitatibus natus dolorum sunt consectetur ipsam, assumenda velit et distinctio, nostrum aspernatur possimus iure! Harum tempore consequatur laboriosam neque voluptates laborum quia itaque
+        voluptate, deleniti rem temporibus hic, quod, qui sit consectetur architecto repellat nam aut ratione! Natus tenetur odit magni amet temporibus unde deserunt possimus quas quidem ea repellat voluptatem eum sapiente excepturi, nostrum ipsa necessitatibus
+        accusamus dolorum reiciendis nobis eligendi eveniet impedit consequatur?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic harum nesciunt molestiae ipsa sint nobis sed, rem at optio repellat quam quia quasi quidem fugit maiores neque praesentium ratione veritatis unde deserunt laudantium id corporis voluptatum
+        a! Nisi est, eius similique obcaecati aspernatur ab dolor porro illo fuga perspiciatis eos explicabo ex ipsum perferendis vero labore necessitatibus! Mollitia error architecto accusantium praesentium, vel est sapiente impedit? Eos quibusdam, quos
+        quis ea facilis facere provident quo quasi dolore libero neque numquam alias impedit molestias dolorem eius sequi animi officiis itaque eum exercitationem magni nulla necessitatibus? Vero dolorem eligendi aspernatur! Libero ex voluptatem vel nisi
+        obcaecati, nam quibusdam itaque blanditiis, magni officia nobis rem, odio voluptate quia sunt. Non sequi earum a, nesciunt atque facere quis perspiciatis magnam iure dignissimos beatae odio? Nesciunt, et consectetur iste perferendis quae fuga
+        magnam ut vitae quo vero? Reprehenderit veniam illo sapiente ducimus voluptas dolore repellendus nemo dolores est, quae iusto, quo debitis. Quasi, distinctio? Ea veritatis, perferendis quasi, ut doloremque quas aut odit nesciunt qui expedita facilis
+        consequuntur sapiente, voluptate fugit totam repudiandae obcaecati eum? Totam quas nisi quibusdam tenetur in natus culpa aperiam aspernatur doloribus pariatur, molestiae iure voluptas! Illo deleniti odit, voluptatum doloremque tenetur sunt, culpa
+        molestias qui itaque id corporis, doloribus amet temporibus eum ut quis autem ex et accusamus nam quo tempora! Explicabo, dicta repellendus ad quia ratione autem voluptates, tempora ea vero consequatur, inventore voluptate repudiandae sint quasi
+        ipsam cupiditate. Aliquam hic veritatis vero commodi ducimus natus libero sapiente odio maxime. Optio eos magnam autem dignissimos, delectus quis totam ad soluta quibusdam quas hic distinctio quos nemo non eligendi ullam cum accusamus aut reprehenderit
+        facere omnis. Distinctio dolorem harum cupiditate odio, pariatur facere voluptatibus. Doloremque atque adipisci praesentium maxime quis. Corporis neque eius, voluptate a ducimus officiis aliquam nihil fugit minus quidem, praesentium rem asperiores
+        labore provident iure nulla id debitis ex illum reiciendis deserunt tempora? Rerum quos perspiciatis cumque ullam dolores, similique ab magnam, in et dolore incidunt deleniti impedit. Atque qui provident autem maxime adipisci beatae eaque hic,
+        animi sapiente, itaque enim iusto consequatur nihil quae? Aliquam molestias quos veniam doloribus. Temporibus corporis quisquam error praesentium rerum voluptatem sequi quasi illum inventore et libero quae fugiat aspernatur, ut atque magnam saepe
+        perferendis, vitae consequuntur nobis quam! Architecto non voluptate harum voluptatum impedit doloremque sint aliquid iste quam suscipit, animi magnam! Explicabo dicta voluptates ab, quisquam praesentium ea, error hic ratione saepe temporibus
+        deserunt officia magni aut voluptatibus rerum totam id itaque eligendi illum quaerat ex quo deleniti! Illo aliquam vel repudiandae aliquid assumenda quos, laboriosam voluptates non laudantium architecto nam eveniet eius soluta! Vel corporis, soluta
+        quasi quidem magnam repudiandae voluptatum voluptatibus possimus ipsum explicabo consequuntur quam quos officiis distinctio sunt nisi molestiae facere rem sit totam reprehenderit. Distinctio a minus earum hic neque praesentium eos quam corporis
+        asperiores, corrupti rerum, dolores animi eligendi maiores aliquam veniam excepturi cupiditate quos. Fuga, debitis? Sit inventore deleniti veritatis dolor, voluptates quae asperiores a rerum! Natus provident ipsam quod libero veniam.</p>
+</body>
+
+</html>

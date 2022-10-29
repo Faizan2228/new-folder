@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        box-sizing: border-box;
+        background-color: black;
+    }
+    
+    .container {
+        max-width: 750px;
+        margin-bottom: 0px;
+    }
+    
+    .container img {
+        max-width: 100%;
+        margin-bottom: 15px;
+        border-radius: 10px 10px 0px 0px;
+        margin-bottom: 0px;
+    }
+    
+    .text {
+        background-color: white;
+        width: 98%;
+        padding: 7px;
+        word-wrap: break-word;
+        border-radius: 0px 0px 10px 10px;
+        text-align: center;
+        margin-top: 0px;
+    }
+    
+    .btn {
+        background-color: black;
+        color: white;
+        padding: 8px;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        font-weight: 20px;
+    }
+    
+    .btn:hover {
+        background-color: blue;
+        color: white;
+    }
+    
+    .text p {
+        font-size: 18px;
+    }
+    
+    .trailer {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        opacity: 1;
+        transition: opacity 0.7s;
+    }
+    
+    .trailer video {
+        position: relative;
+        max-width: 900px;
+        outline: none;
+    }
+    
+    .close-x {
+        color: white;
+        position: absolute;
+        justify-content: right;
+        text-align: right;
+        top: 8%;
+        right: 10%;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    
+    .active.trailer {
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    @media (max-width: 991px) {
+        .trailer video {
+            max-width: 90%;
+        }
+        .close-x {
+            top: 10%;
+            right: 5%;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <img src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        <div class="text">
+            <h1>Movie Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus voluptatibus voluptatem fugit adipisci molestias totam natus repellendus consequatur tempore aspernatur, porro, quasi iste omnis harum numquam similique est praesentium.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, temporibus.</p>
+            <button class="btn">Watch Now</button>
+
+        </div>
+    </div>
+    <div class="trailer active">
+        <video src="trailer.mp4" controls></video>
+        <i class="fa fa-times close-x" aria-hidden="true"></i>
+
+
+        <script>
+            const btn = document.querySelector(".btn");
+            const close = document.querySelector(".close-x");
+            const trailer = document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            btn.addEventListener("click", () => {
+                if (trailer.classList.contains("active")) {
+                    trailer.classList.remove("active");
+                }
+            });
+            close.addEventListener("click", () => {
+                if (!trailer.classList.contains("active")) {
+                    trailer.classList.add("active");
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            });
+        </script>
+    </div>
+</body>
+
+</html>

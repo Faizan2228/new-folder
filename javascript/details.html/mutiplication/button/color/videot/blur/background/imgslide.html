@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+    }
+    
+    .img {
+        background-image: url("https://images.unsplash.com/photo-1662997928780-527effae2443?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .container {
+        padding: 80px;
+        background-color: black;
+        border-radius: 12px;
+        color: white;
+        margin: 9px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+    .container h1 {
+        text-align: center;
+        font-size: 39px;
+        letter-spacing: 3px;
+    }
+    
+    .container p {
+        font-size: 29px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="img" id="back-img"></div>
+    <div class="container">
+        <h1>WELCOME TO WEBSITE</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga doloribus iste fugit similique, deleniti dolorum cupiditate facere exercitationem sint molestiae fugiat id! Labore iusto consequuntur voluptatum at nostrum ab earum asperiores
+            ducimus doloremque quam minima autem ipsum rerum, alias error ex voluptatibus eius, recusandae dolores dicta eaque obcaecati quo?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga doloribus iste fugit similique, deleniti dolorum cupiditate facere exercitationem sint molestiae fugiat id! Labore iusto consequuntur voluptatum at nostrum ab earum asperiores
+            ducimus doloremque quam minima autem ipsum rerum, alias error ex voluptatibus eius, recusandae dolores dicta eaque obcaecati quo?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga doloribus iste fugit similique, deleniti dolorum cupiditate facere exercitationem sint molestiae fugiat id! Labore iusto consequuntur voluptatum at nostrum ab earum asperiores
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga doloribus iste fugit similique, deleniti dolorum cupiditate facere exercitationem sint molestiae fugiat id! Labore iusto consequuntur voluptatum at nostrum ab earum asperiores
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga doloribus iste fugit similique, deleniti dolorum cupiditate facere exercitationem sint molestiae fugiat id! Labore iusto consequuntur voluptatum at nostrum ab earum
+                    asperiores ducimus doloremque quam minima autem ipsum rerum, alias error ex voluptatibus eius, recusandae dolores dicta eaque obcaecati quo?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga doloribus iste fugit similique, deleniti dolorum cupiditate facere exercitationem sint molestiae fugiat id! Labore iusto consequuntur voluptatum at nostrum ab earum
+                    asperiores ducimus doloremque quam minima autem ipsum rerum, alias error ex voluptatibus eius, recusandae dolores dicta eaque obcaecati quo?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet fuga doloribus iste fugit similique, deleniti dolorum cupiditate facere exercitationem sint molestiae fugiat id! Labore iusto consequuntur voluptatum at nostrum ab earum
+                    asperiores ducimus doloremque quam minima autem ipsum rerum, alias error ex voluptatibus eius, recusandae dolores dicta eaque obcaecati quo?</p>
+    </div>
+    <script>
+        const bgimg = document.getElementById("back-img");
+        window.addEventListener("scroll", () => {
+            updateimg();
+
+        });
+
+        function updateimg() {
+            bgimg.style.opacity = 1 - window.pageYOffset / 900;
+            bgimg.style.backgroundSize = 160 - window.pageYOffset / 16 + "%";
+
+        }
+    </script>
+</body>
+
+</html>

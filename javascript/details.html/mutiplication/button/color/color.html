@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+    }
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .color {
+        width: 300px;
+        height: 150px;
+        background-color: red;
+        border-radius: 10px;
+        margin: 5px;
+        border: solid 3px black;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        color: white;
+        font-size: 28px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, .7);
+    }
+</style>
+
+<body>
+    <h1>Random Color Generator</h1>
+    <div class="container">
+
+    </div>
+
+    <script>
+        const cont = document.querySelector(".container");
+        for (let index = 0; index < 30; index++) {
+            const colorelm = document.createElement("div");
+            colorelm.classList.add("color");
+            cont.appendChild(colorelm);
+        }
+
+        const colr = document.querySelectorAll(".color");
+        console.log(colr);
+
+        function genercolor() {
+            colr.forEach((colr) => {
+                const newcolrcode = randomcolors();
+                colr.style.backgroundColor = "#" + newcolrcode;
+                colr.innerText = "#" + newcolrcode;
+            });
+        }
+        genercolor();
+
+        function randomcolors() {
+            const chars = "1234567890abcdef";
+            const colorcodelen = 6;
+            let colorcode = "";
+            for (let index = 0; index < colorcodelen; index++) {
+                const randnum = Math.floor(Math.random() * chars.length);
+                colorcode += chars.substring(randnum, randnum + 1);
+
+            }
+            return colorcode;
+
+        }
+    </script>
+</body>
+
+</html>

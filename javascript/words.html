@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #head {
+        text-align: center;
+        background-color: green;
+        padding: 10px 12px;
+        margin-bottom: 0px;
+        font-size: 36px;
+    }
+    
+    #counter {
+        text-align: center;
+        background-color: blue;
+        margin: 0px;
+        padding: 10px 16px;
+        font-size: 30px;
+        font-weight: bold;
+        font-style: italic;
+    }
+    
+    #text {
+        margin-top: 0px;
+        width: 99%;
+        border: 2px blue solid;
+        height: 1000px;
+        font-size: 19px;
+    }
+    
+    .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: white 2px solid;
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    #white {
+        background-color: white;
+    }
+    
+    #yellow {
+        background-color: yellow;
+    }
+    
+    #red {
+        background-color: red;
+    }
+    
+    #black {
+        background-color: black;
+    }
+    
+    #menu {
+        background-color: lightblue;
+        width: 100%;
+        text-align: center;
+        height: 60px;
+    }
+    
+    #menu li {
+        display: inline-block;
+        padding: 15px 10px;
+        font-size: 20px;
+        color: white;
+    }
+    
+    .texts {
+        text-transform: uppercase;
+    }
+</style>
+
+<body>
+    <span class="circle" id="white" onclick="change('#FFFFFF')"></span>
+    <span class="circle" id="yellow" onclick="change('#FFFF00')"></span>
+    <span class="circle" id="red" onclick="change('#FF0000')"></span>
+    <span class="circle" id="black" onclick="change('#000000')"></span>
+    <br>
+    <div id="menu">
+        <li>Home</li>
+        <li>Services</li>
+        <li>Learn more</li>
+        <li>About us</li>
+        <li>Target</li>
+    </div>
+
+
+    <h1 id="head">Word Counter</h1>
+    <p id="counter">
+        <span id="word">0 </span> words
+        <span id="char">0 </span> characters <br>
+        <button id="btn">uppercase</button>
+        <button id="btn2" class="bts">lowercase</button>
+    </p>
+    <textarea id="text" class="cat"></textarea>
+
+
+    <script>
+        let text = document.getElementById("text");
+        text.addEventListener('input', function() {
+            var count = this.value;
+            let lens = count.length;
+            document.getElementById("char").innerHTML = lens;
+            count = count.trim();
+            let words = count.split(" ");
+            let clean = words.filter(function(elm) {
+                return elm != "";
+            });
+            document.getElementById("word").innerHTML = clean.length;
+
+        });
+        // //////////////////////////////////////////////////
+        function change(color) {
+            document.body.style.backgroundColor = color;
+
+        }
+
+        let mybtn = document.getElementById("btn");
+        mybtn.addEventListener('click', function() {
+            let texta = document.getElementById("text");
+            if (!texta.classList.contains('texts')) {
+                texta.classList.add('texts');
+            }
+        });
+        const btn2 = document.getElementById("btn2");
+        btn2.addEventListener('click', () => {
+            let texta = document.getElementById("text");
+            if (texta.classList.contains('texts')) {
+                texta.classList.remove('texts');
+            }
+        });
+    </script>
+</body>
+
+</html>
